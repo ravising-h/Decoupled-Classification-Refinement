@@ -5,7 +5,7 @@
 # Written by Guodong Zhang, Bin Xiao
 # --------------------------------------------------------
 
-import cPickle
+import pickle as  cPickle
 import mxnet as mx
 from utils.symbol import Symbol
 from operator_py.proposal import *
