@@ -2,7 +2,7 @@
 MXNET_VERSION: "mxnet"
 output_path: "./output/rcnn/coco"
 symbol: resnet_v1_101_rcnn_dcn
-gpus: '0,1,2,3'
+gpus: '0,'
 CLASS_AGNOSTIC: true
 SCALES:
 - 600
@@ -49,7 +49,7 @@ network:
   - 32
   NUM_ANCHORS: 12
 dataset:
-  NUM_CLASSES: 81
+  NUM_CLASSES: 2
   dataset: coco
   dataset_path: "./data/coco"
   image_set: train2017
@@ -75,7 +75,7 @@ TRAIN:
   # whether use OHEM
   ENABLE_OHEM: false
   # size of images for each device, 2 for rcnn, 1 for rpn and e2e
-  BATCH_IMAGES: 1
+  BATCH_IMAGES: 3
   # e2e changes behavior of anchor loader and metric
   END2END: true
   # group images with similar aspect ratio
@@ -135,7 +135,7 @@ TEST:
   # use rpn to generate proposal
   HAS_RPN: true
   # size of images for each device
-  BATCH_IMAGES: 1
+  BATCH_IMAGES: 3
   # RPN proposal
   CXX_PROPOSAL: false
   RPN_NMS_THRESH: 0.7

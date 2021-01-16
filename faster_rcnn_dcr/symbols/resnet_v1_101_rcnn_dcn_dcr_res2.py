@@ -1678,7 +1678,7 @@ class resnet_v1_101_rcnn_dcn_dcr_res2(Symbol):
     def get_symbol_test(self, cfg, is_train=True):
 
         if is_train:
-            print 'This is a test symbol!'
+            print ('This is a test symbol!')
             is_train = False
 
         # config alias for convenient
